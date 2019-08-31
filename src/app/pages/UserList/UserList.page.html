@@ -1,0 +1,34 @@
+<div>
+    <input type="text" class="form-control" name="Filtro" placeholder="Filtro" (keyup)="setFilterBy($event)" />
+    <button type="button" class="btn btn-outline-secondary" (click)="sort()">Ordenar</button>
+</div>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Idade</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">CPF</th>
+                <th scope="col">Endere&ccedil;o</th>
+                <th scope="col">Complemento</th>
+                <th scope="col">CEP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users | async | filter: filterBy | sort: {property: column, order: order};">
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.iddoc }}</td>
+                <td>{{ user.address }}</td>
+                <td>{{ user.complement }}</td>
+                <td>{{ user.zipcode }}</td>
+                <button type="button" class="btn btn-outline-secondary" (click)="edit(user, user.key)">Editar</button>
+                <button type="button" class="btn btn-outline-secondary" (click)="delete(user.key)">Excluir</button>
+            </tr>
+        </tbody>
+    </table>
+</div> 

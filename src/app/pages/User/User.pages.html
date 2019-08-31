@@ -1,0 +1,23 @@
+<div>
+    <div>
+        <app-Loading [show]="loading"></app-Loading>
+    </div>
+    <br />
+    <form (ngSubmit)="onSubmit()">
+            <input type="text" class="form-control" [(ngModel)]="user.name" placeholder="Nome" name="name"/>
+
+            <input type="text" class="form-control" [(ngModel)]="user.age" placeholder="Idade" name="age" />
+            <input type="tel" class="form-control" [(ngModel)]="user.phone" placeholder="Telefone" name="phone" />
+            <input type="text" class="form-control" [(ngModel)]="user.email" placeholder="E-mail" name="email" />
+            <input type="text" class="form-control" [(ngModel)]="user.iddoc" placeholder="CPF" name="iddoc" />
+            <input type="text" class="form-control" [(ngModel)]="user.address" placeholder="Endere&ccedil;o"
+                name="address" />
+            <input type="text" class="form-control" [(ngModel)]="user.complement" placeholder="Complemento"
+                name="complement" />
+            <input type="text" class="form-control" [(ngModel)]="user.zipcode" placeholder="CEP" name="zipcode" />
+            <br />
+            <button type="submit" class="btn btn-primary" >
+                Criar/Alterar
+            </button>
+        </form>
+</div>
