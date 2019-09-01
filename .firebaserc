@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "fiapangular"
+    "default": "fiapangular",
+    "FiapAngular": "fiapangular"
   }
 }

@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'userlist',
-    templateUrl: './UserList.page.html',
+  selector: 'userlist',
+  templateUrl: './UserList.page.html',
 })
 export class UserListPage implements OnInit {
   users: Observable<any>;
@@ -18,18 +18,18 @@ export class UserListPage implements OnInit {
   public column: string = 'name';
   public router: Router;
 
-  constructor(private userService: UserService, private userDataService: UserDataService , router: Router) { 
-    this.router = router;    
+  constructor(private userService: UserService, private userDataService: UserDataService, router: Router) {
+    this.router = router;
   }
 
   setFilterBy(event: any) {
     this.filterBy = event.target.value;
-}
+  }
 
-    sort() {
-        this.descending = !this.descending;
-        this.order = this.descending ? 1 : -1;
-    }
+  sort() {
+    this.descending = !this.descending;
+    this.order = this.descending ? 1 : -1;
+  }
 
   ngOnInit() {
     this.users = this.userService.getAll();
@@ -44,9 +44,9 @@ export class UserListPage implements OnInit {
     this.userDataService.changeUser(user, key);
   }
 
-  new() {
-    this.router.navigate(['/user', '']);    
+  newcad() {
+    this.router.navigate(['/user', '']);
   }
 
-  
+
 }

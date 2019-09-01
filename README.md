@@ -24,9 +24,9 @@ O Aplicativo é recarregado automáticamente após qualquer mudança no arquivo.
 
 2 - Na tela principal clique em Adicionar Contato;
 
-2 - Na tela de Cadastro informe os dados para realizar um novo cadastro e clique em salvar;
+3 - Na tela de Cadastro informe os dados para realizar um novo cadastro e clique em salvar;
 
-3 - Na tela principal é possivel fazer filtro e ordernar por nome.
+4 - Na tela principal é possivel fazer filtro e ordernar por nome.
 
 
 ## FIAP 2019
