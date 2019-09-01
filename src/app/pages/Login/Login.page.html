@@ -1,0 +1,26 @@
+<div>
+  <app-Loading [show]="loading"></app-Loading>
+</div>
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Bem Vindo!</h4>
+  <p>Sistema de cadastro.
+    <hr>
+    <p class="mb-0">Realize o Login.</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div>
+      <form [formGroup]="loginForm">
+        <div class="form-group">
+          <input type="email" formControlName="email" class="form-control" placeholder="E-mail">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" formControlName="password" placeholder="Senha">
+          <label class="error">{{errorMessage}}</label>
+        </div>
+        <button type="submit" (click)="Login(loginForm.value)" class="btn btn-primary">Entrar</button>
+        <div>Novo por aqui? <a href="/register">Cadastre-se</a></div>
+      </form>
+    </div>
+  </div>
+</div>

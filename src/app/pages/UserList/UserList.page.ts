@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'user-list',
+    selector: 'userlist',
     templateUrl: './UserList.page.html',
 })
 export class UserListPage implements OnInit {

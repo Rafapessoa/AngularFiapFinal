@@ -1,0 +1,35 @@
+<div>
+  <app-Loading [show]="loading"></app-Loading>
+</div>
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Crie sua conta</h4>
+</div>
+<div class="container">
+  <div class="row">
+    <div>
+      <form [formGroup]="registerForm">
+        <div class="form-group">
+          <input type="email" formControlName="email" class="form-control" placeholder="E-mail">
+        </div>
+        <div>
+          <div class="form-group">
+            <input type="password" class="form-control" formControlName="password" placeholder="Senha">
+            <label class="error">{{errorMessage}}</label>
+            <input type="password" class="form-control" formControlName="passwordConfirm" placeholder="Confirmar senha">
+            <label class="success">{{successMessage}}</label>
+          </div>
+        </div>
+        <div *ngIf="registerForm.value.password == registerForm.value.passwordConfirm">
+          <button type="submit" (click)="Register(registerForm.value)" class="btn btn-primary">Cadastrar</button>
+        </div>
+        <div *ngIf="registerForm.value.password != registerForm.value.passwordConfirm">
+          <label col-md-2 class="alert alert-danger" role="alert">As senhas digitadas não conferem!</label>
+          <button type="submit" class="btn btn-secondary">Cadastrar</button>
+        </div>
+        <div>
+          <p>Tem cadastro? <a href="/login">Faça o Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
