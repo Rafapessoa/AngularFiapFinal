@@ -8,8 +8,8 @@ import { UserDataService } from '../../services/user-data.service';
 })
 
 export class UserPage implements OnInit {
-  private user: User
-  private key: string = '';
+  public user: User
+  public key: string = '';
  
   constructor(private userService: UserService, private userDataService: UserDataService) { }
  
