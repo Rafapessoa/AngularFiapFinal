@@ -44,6 +44,9 @@ export class UserListPage implements OnInit {
     this.userDataService.changeUser(user, key);
   }
 
+  new() {
+    this.router.navigate(['/user', '']);    
+  }
 
   
 }

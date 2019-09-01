@@ -13,14 +13,12 @@ export class UserService {
   insert(user: User) {
     this.db.list('user').push(user)
       .then((result: any) => {
-        console.log(result.key);
       });
   }
  
   update(user: User, key: string) {
     this.db.list('user').update(key, user)
       .catch((error: any) => {
-        console.error(error);
       });
   }
  
